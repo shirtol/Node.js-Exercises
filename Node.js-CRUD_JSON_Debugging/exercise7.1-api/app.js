@@ -17,18 +17,6 @@ const getDataByAxios = async () => {
 
 // await getDataByAxios();
 
-// const getDataByRequest = () => {
-//     const req = https.request(
-//         "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=4658",
-//         (res) => {
-//             console.log(chalk.green.inverse(`statusCode: ${res.statusCode}`));
-//             let data = "";
-//             res.on("data", (chunk) => (data += chunk));
-//             res.on("end", () => console.log(data));
-//         }
-//     );
-// };
-
 const getDataByRequest = () => {
     const options = {
         url: "https://pokeapi.co/api/v2/pokemon/ditto",
@@ -37,9 +25,9 @@ const getDataByRequest = () => {
     request(options, function (err, res, body) {
         let json = JSON.parse(body);
         console.log(json);
-        console.error("error:", err); // Print the error if one occurred
-        console.log("statusCode:", res && res.statusCode); // Print the response status code if a response was received
-        console.log("body:", body); // Print the HTML for the Google homepage.
+        console.error("error:", err);
+        console.log("statusCode:", res && res.statusCode);
+        console.log("body:", body);
     });
 };
 
