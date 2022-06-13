@@ -37,8 +37,9 @@ const saveUsers = (users) => {
     });
 };
 
-const createUser = (id, name, email) => {
+const createUser = (name, email) => {
     const users = loadUsers();
+    const id = uniqid();
     const duplicateUser = users.find((user) => user.id === id);
 
     if (!duplicateUser) {
@@ -94,13 +95,13 @@ const deleteUser = (id) => {
     }
 };
 // createFile();
-// createUser(uniqid(), "shir", "hhh@gmail.com");
+// createUser("shir", "hhh@gmail.com");
 // readUser("ojj7f0l4cq0m20");
 // readUser("ojj63chx647");
 // updateUser({
-//     id: "ojj7f0l4cq0m20",
+//     id: "ojj4rcl4cwepy3",
 //     name: "example10",
 //     email: "example@gmail.com",
 // });
 
-// deleteUser("ojj7f0l4cq0m20");
+deleteUser("ojj4rcl4cwepy3");
