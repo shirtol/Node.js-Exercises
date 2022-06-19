@@ -18,13 +18,13 @@
 
 1.08. Display all restaurants in ascending order by city names: `db.restaurants.find({}).collation({locale: "en"}).sort({"address.city": 1})`
 
-1.09. Update a specific restaurant's name: `db.restaurants.updateOne({_id:ObjectId("62af3265a0266d8ee9b8bc25")}, {$set:{name:"a plus"}})`
+1.09. Update a specific restaurant's name: `db.restaurants.updateOne({_id:ObjectId("62af5e7c6ee4922a8a832555")}, {$set:{name:"a plus"}})`
 
-1.10. Update a specific restaurant by adding a new review: `db.restaurants.updateOne({_id:ObjectId("62af3265a0266d8ee9b8bc25")}, {$push:{reviews: {date: "19.6.22", score: 5}}})`
+1.10. Update a specific restaurant by adding a new review: `db.restaurants.updateOne({_id:ObjectId("62af5e7c6ee4922a8a832555")}, {$push:{reviews: {date: "19.6.22", score: 5}}})`
 
 1.11. Update all restaurants to be kosher: `db.restaurants.updateMany({}, {$set:{kosher: true}})`
 
-1.12. Delete a specific restaurant: `db.restaurants.deleteOne({_id:ObjectId("62af3265a0266d8ee9b8bc24")})`
+1.12. Delete a specific restaurant: `db.restaurants.deleteOne({_id:ObjectId("62af5e7c6ee4922a8a832554")})`
 
 1.13. Delete all restaurants: `db.restaurants.deleteMany({})`
 
@@ -48,4 +48,4 @@
 
 4.01. Display all restaurants average score: `db.restaurants.aggregate([{$unwind: "$reviews"}, {$group: {_id: "$name", avgScore: {$avg: "$reviews.score"}}}])`
 
-4.02. Display a specific restaurant average score: `db.restaurants.aggregate([{$match: {_id:ObjectId("62af3265a0266d8ee9b8bc25")}}, {$unwind: "$reviews"}, {$group: {_id: "$name", avgScore: {$avg: "$reviews.score"}}}])`
+4.02. Display a specific restaurant average score: `db.restaurants.aggregate([{$match: {_id:ObjectId("62af5e7c6ee4922a8a832553")}}, {$unwind: "$reviews"}, {$group: {_id: "$name", avgScore: {$avg: "$reviews.score"}}}])`
