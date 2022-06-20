@@ -22,7 +22,7 @@ MongoClient.connect(
         let usersIds = [];
         const postsIds = [];
 
-        //!2: async await
+        //!2: user
         try {
             const result = await db.collection("users").insertMany(users);
             usersIds = result.insertedIds;
@@ -31,7 +31,7 @@ MongoClient.connect(
             console.log(err);
         }
 
-        //!3: async await - posts
+        //!3: posts
         posts.forEach(async (post, idx) => {
             try {
                 const { insertedId } = await db
@@ -57,8 +57,7 @@ MongoClient.connect(
             }
         });
 
-        //!4: async await comments
-
+        //!4: comments
         try {
             const { insertedId } = await db
                 .collection("comments")
@@ -85,11 +84,5 @@ MongoClient.connect(
         } catch (err) {
             console.log(err);
         }
-
-        // db.collection("users").deleteMany({});
     }
 );
-
-// const getUserById = (id) => {
-//     return db.collection("users").find({ _id: id });
-// };
