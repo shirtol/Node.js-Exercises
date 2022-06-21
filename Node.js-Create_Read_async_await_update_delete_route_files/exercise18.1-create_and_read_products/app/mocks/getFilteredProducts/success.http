@@ -1,0 +1,3 @@
+GET /api/products/filter/price?max=300&min=0 HTTP/1.1
+Host: localhost:5000
+

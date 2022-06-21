@@ -1,0 +1,17 @@
+POST /api/products HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+
+
+{
+    "name": "NikiNkeeee",
+    "category": "shoes",
+    "isActive": true,
+    "details": {
+        "description": "amazingvdvdsvdd!",
+        "price": 300,
+        "discount": 50,
+        "phoneNumber": "+972509344123",
+        "images": [{ "url": "hfkdgdfgdnchfmc.png" }, { "url": "hfkdgdfgdnchfmc.png" }]
+    }
+}

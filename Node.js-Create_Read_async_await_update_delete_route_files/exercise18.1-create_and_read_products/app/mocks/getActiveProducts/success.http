@@ -1,0 +1,2 @@
+GET /api/products/active HTTP/1.1
+Host: {{host}}

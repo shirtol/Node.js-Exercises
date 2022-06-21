@@ -1,0 +1,2 @@
+GET /api/products/62b09cd62b4b2a9a1b1af76f HTTP/1.1
+Host: localhost:5000

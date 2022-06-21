@@ -1,0 +1,9 @@
+PATCH /api/products/update/62b09cd52b4b2a9a1b1af76d HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+
+
+{
+    "isActive": false,
+    "details.discount": 200
+}
